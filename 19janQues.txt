@@ -1,0 +1,45 @@
+Q1. Describe higher order functions.
+Ans..
+Higher Orders Functions are functions that perform operations on other functions.
+
+In this definition, operations can mean taking one or more functions as an argument OR returning a function as the result. It doesn't have to do both. Doing one or the other qualifies a function as a higher order function.
+
+example of higher order function:
+const numbers = [1, 2, 3, 4, 5];
+
+function addOne(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i] + 1);
+  }
+}
+
+addOne(numbers);
+
+
+
+Q2. write use cases + any one code example for map, filter and reduce
+Answer.
+Example of map functions: To doubles the numbers
+const numbers = [1, 2, 4];
+const doubles = numbers.map(function mapper(number) {
+  return 2 * number;
+});
+doubles; // [2, 4, 8]
+
+Example of filter : 
+The filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.
+
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(item => item % 2 === 0);
+console.log(evens); // [2, 4]
+
+ reduce :
+ Syntax
+arr.reduce(callback[, initialValue])
+The reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce(function (result, item) {
+  return result + item;
+}, 0);
+console.log(sum); // 10
